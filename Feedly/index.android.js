@@ -16,7 +16,9 @@ import Header from './src/components/Header'
 export default class FeedlyMain extends Component {
   render() {
     return (
-      <Header />
+      <Header
+        headerText={'API CALLS'}
+       />
     //   <View style={styles.container}>
     //     <Text style={styles.welcome}>
     //       Welcome to React Native!
