@@ -12,13 +12,17 @@ import {
   View
 } from 'react-native';
 import Header from './src/components/Header'
+import PlayerList from './src/components/PlayerList'
 
 export default class FeedlyMain extends Component {
   render() {
     return (
-      <Header
-        headerText={'API CALLS'}
-       />
+      <View>
+        <Header
+          headerText={'API CALLS'}
+         />
+         <PlayerList />
+      </View>
     //   <View style={styles.container}>
     //     <Text style={styles.welcome}>
     //       Welcome to React Native!
