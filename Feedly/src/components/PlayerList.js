@@ -1,15 +1,27 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import RiotKey from '../../keys'
+import RiotKey from '../../keys';
+
 class PlayerList extends Component {
+
+  state = {
+    players: []
+  };
+
   componentWillMount(){
-    fetch(`https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/uvux7?api_key=${RiotKey}`, {
+    fetch(`https://na.api.riotgames.com/api/lol/NA/v1.4/summoner/by-name/uvux7?api_key=${RiotKey}`, {
       method: 'get'
     })
-    .catch(()=> console.warn('didnt get data'))
-    .then(()=> console.warn('got data'))
+    .catch((err)=> console.warn(err))
+    .then((response)=> response.json())
+    .then((data)=> {
+      console.log(data)
+      // this.setState({ players: playersname}) )
+    })
   }
+
   render(){
+    console.log(this.state)
     return(
       <View>
         <Text>PlayerList</Text>
