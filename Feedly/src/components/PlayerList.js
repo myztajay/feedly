@@ -15,8 +15,8 @@ class PlayerList extends Component {
     .catch((err)=> console.warn(err))
     .then((response)=> response.json())
     .then((data)=> {
-      console.log(data)
-      // this.setState({ players: playersname}) )
+      const players = [...this.state.players, data.uvux7.name]
+      this.setState({ players })
     })
   }
 
