@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import RiotKey from '../../keys';
+import PlayerDetail from './PlayerDetail'
 
 class PlayerList extends Component {
 
@@ -15,16 +16,26 @@ class PlayerList extends Component {
     .catch((err)=> console.warn(err))
     .then((response)=> response.json())
     .then((data)=> {
-      const players = [...this.state.players, data.uvux7.name]
+      const { id, name, profileIconId, summonerLevel } = data.uvux7
+
+      const players = [...this.state.players,  id, name, profileIconId, summonerLevel]
       this.setState({ players })
+      
+
     })
   }
 
+  renderPlayers(){
+    console.log(this.state.players)
+    return this.state.players.map((name)=>
+    <PlayerDetail key={name} playerName={name}/> );
+  }
+
   render(){
-    console.log(this.state)
+
     return(
       <View>
-        <Text>PlayerList</Text>
+        {this.renderPlayers()}
       </View>
     )
   }
