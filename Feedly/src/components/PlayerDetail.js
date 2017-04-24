@@ -7,6 +7,7 @@ const PlayerDetail = (props) => {
   return(
     <Card>
       <CardSection>
+        <View></View>
         <Text>{props.playerName}</Text>
       </CardSection>
     </Card>

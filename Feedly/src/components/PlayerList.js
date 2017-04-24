@@ -10,25 +10,23 @@ class PlayerList extends Component {
   };
 
   componentWillMount(){
-    fetch(`https://na.api.riotgames.com/api/lol/NA/v1.4/summoner/by-name/uvux7?api_key=${RiotKey}`, {
+    fetch(`https://na1.api.riotgames.com/observer-mode/rest/consumer/getSpectatorGameInfo/NA1/84991782?api_key=${RiotKey}`, {
       method: 'get'
     })
     .catch((err)=> console.warn(err))
     .then((response)=> response.json())
-    .then((data)=> {
-      const { id, name, profileIconId, summonerLevel } = data.uvux7
-
-      const players = [...this.state.players,  id, name, profileIconId, summonerLevel]
+    .then((riotData)=> {
+      const {participants, bannedChampions } = riotData
+      const players = participants
       this.setState({ players })
-      
 
     })
   }
 
   renderPlayers(){
     console.log(this.state.players)
-    return this.state.players.map((name)=>
-    <PlayerDetail key={name} playerName={name}/> );
+    return this.state.players.map((player)=>
+    <PlayerDetail key={player.summonerId} playerName={player.summonerName}/> );
   }
 
   render(){
