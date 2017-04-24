@@ -10,7 +10,7 @@ class PlayerList extends Component {
   };
 
   componentWillMount(){
-    fetch(`https://na1.api.riotgames.com/observer-mode/rest/consumer/getSpectatorGameInfo/NA1/84991782?api_key=${RiotKey}`, {
+    fetch(`https://na1.api.riotgames.com/observer-mode/rest/consumer/getSpectatorGameInfo/NA1/26364936?api_key=${RiotKey}`, {
       method: 'get'
     })
     .catch((err)=> console.warn(err))
@@ -19,14 +19,13 @@ class PlayerList extends Component {
       const {participants, bannedChampions } = riotData
       const players = participants
       this.setState({ players })
-
     })
   }
 
   renderPlayers(){
     console.log(this.state.players)
     return this.state.players.map((player)=>
-    <PlayerDetail key={player.summonerId} playerName={player.summonerName}/> );
+    <PlayerDetail key={player.summonerId} player={player}/> );
   }
 
   render(){
