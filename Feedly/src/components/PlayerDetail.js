@@ -3,6 +3,7 @@ import { View, Text, Image } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection'
 import Translation from '../Translation'
+import Button from './Button'
 
 const PlayerDetail = ({ player }) => {
   const {teamId, summonerName, championId } = player
@@ -21,6 +22,10 @@ const PlayerDetail = ({ player }) => {
           <Text style={styles.headerTextStyle}>{summonerName}</Text>
           <Text>{teamId}</Text>
         </View>
+      </CardSection>
+
+      <CardSection>
+        <Button />
       </CardSection>
     </Card>
   )

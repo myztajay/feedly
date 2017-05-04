@@ -23,7 +23,6 @@ class PlayerList extends Component {
   }
 
   renderPlayers(){
-    console.log(this.state.players)
     return this.state.players.map((player)=>
     <PlayerDetail key={player.summonerId} player={player}/> );
   }
