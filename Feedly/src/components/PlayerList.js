@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import RiotKey from '../../keys';
 import PlayerDetail from './PlayerDetail'
 
@@ -10,7 +10,7 @@ class PlayerList extends Component {
   };
 
   componentWillMount(){
-    fetch(`https://na1.api.riotgames.com/observer-mode/rest/consumer/getSpectatorGameInfo/NA1/43583429?api_key=${RiotKey}`, {
+    fetch(`https://na1.api.riotgames.com/observer-mode/rest/consumer/getSpectatorGameInfo/NA1/20132258?api_key=${RiotKey}`, {
       method: 'get'
     })
     .catch((err)=> console.warn(err))
@@ -31,9 +31,9 @@ class PlayerList extends Component {
   render(){
 
     return(
-      <View>
+      <ScrollView>
         {this.renderPlayers()}
-      </View>
+      </ScrollView>
     )
   }
 }

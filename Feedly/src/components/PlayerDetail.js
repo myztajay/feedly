@@ -11,14 +11,14 @@ const PlayerDetail = ({ player }) => {
   return(
     <Card>
       <CardSection>
-        <View>
+        <View style={styles.thumbnailContainerStyle}>
           <Image
           style={styles.thumbnailStyle}
           source={champImage}
           />
         </View>
-        <View>
-          <Text>{summonerName}</Text>
+        <View style={styles.headerContentStyle}>
+          <Text style={styles.headerTextStyle}>{summonerName}</Text>
           <Text>{teamId}</Text>
         </View>
       </CardSection>
@@ -31,9 +31,18 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'space-around'
   },
+  headerTextStyle:{
+    fontSize: 18
+  },
   thumbnailStyle: {
     height: 50,
     width: 50
+  },
+  thumbnailContainerStyle:{
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: 10,
+    marginRight: 10
   }
 }
 
