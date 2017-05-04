@@ -6,7 +6,7 @@ import Translation from '../Translation'
 
 const PlayerDetail = ({ player }) => {
   const {teamId, summonerName, championId } = player
-  const champImage = `../ChampionImages/${Translation[championId]}.png`
+  const champImage = Translation[championId]
 
   return(
     <Card>
@@ -14,7 +14,7 @@ const PlayerDetail = ({ player }) => {
         <View>
           <Image
           style={styles.thumbnailStyle}
-          source={{uri: 'http://www.fillmurray.com/100/100'}}
+          source={champImage}
           />
         </View>
         <View>

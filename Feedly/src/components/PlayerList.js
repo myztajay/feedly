@@ -10,7 +10,7 @@ class PlayerList extends Component {
   };
 
   componentWillMount(){
-    fetch(`https://na1.api.riotgames.com/observer-mode/rest/consumer/getSpectatorGameInfo/NA1/19134540?api_key=${RiotKey}`, {
+    fetch(`https://na1.api.riotgames.com/observer-mode/rest/consumer/getSpectatorGameInfo/NA1/43583429?api_key=${RiotKey}`, {
       method: 'get'
     })
     .catch((err)=> console.warn(err))
