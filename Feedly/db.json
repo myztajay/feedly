@@ -1,4 +1,5 @@
-{
+{"files":
+  {
     "gameId": 2482867376,
     "gameStartTime": 1492992276489,
     "platformId": "NA1",
@@ -772,4 +773,5 @@
             "pickTurn": 6
         }
     ]
+}
 }
