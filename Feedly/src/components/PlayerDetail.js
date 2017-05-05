@@ -24,7 +24,9 @@ const PlayerDetail = ({ player }) => {
       </CardSection>
 
       <CardSection>
-        <Button onPress={()=>console.warn(summonerName)}/>
+        <Button onPress={()=>console.warn(summonerName)}>
+          More intel on {summonerName}!
+        </Button>
       </CardSection>
     </Card>
   )
