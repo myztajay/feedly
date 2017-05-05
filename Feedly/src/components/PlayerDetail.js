@@ -24,14 +24,14 @@ const PlayerDetail = ({ player }) => {
       </CardSection>
 
       <CardSection>
-        <Button />
+        <Button onPress={()=>console.warn(summonerName)}/>
       </CardSection>
     </Card>
   )
 }
 
 const styles = {
-  
+
   headerContentStyle: {
     flexDirection: 'column',
     justifyContent: 'space-around'
