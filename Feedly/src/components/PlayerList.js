@@ -43,10 +43,16 @@ class PlayerList extends Component {
   render(){
 
     return(
-      <ScrollView>
+      <ScrollView style={styles.mainContainer}>
         {this.renderPlayers()}
       </ScrollView>
     )
+  }
+}
+
+const styles = {
+  mainContainer: {
+    backgroundColor: '#2980b9'
   }
 }
 

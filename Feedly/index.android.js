@@ -19,7 +19,7 @@ export default class FeedlyMain extends Component {
     return (
       <View>
         <Header
-          headerText={'API CALLS'}
+          headerText={'FeedMe'}
          />
          <PlayerList />
       </View>

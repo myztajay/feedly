@@ -1,7 +1,5 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import RiotKey from '../../keys'
-
 
 const Header = (props) =>{
   const {textStyle, viewStyle} = styles;
@@ -14,7 +12,7 @@ const Header = (props) =>{
 
 const styles = {
   viewStyle:{
-    backgroundColor: '#F8F8F8',
+    backgroundColor: '#2571a4',
     justifyContent: 'center',
     alignItems: 'center',
     height: 60,
@@ -25,7 +23,8 @@ const styles = {
     position: 'relative'
   },
   textStyle: {
-    fontSize: 30
+    fontSize: 30,
+    color: '#FEFEFE'
   }
 }
 

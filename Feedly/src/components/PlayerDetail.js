@@ -8,7 +8,6 @@ import Button from './Button'
 const PlayerDetail = ({ player }) => {
   const {teamId, summonerName, championId } = player
   const champImage = Translation[championId]
-
   return(
     <Card>
       <CardSection>
@@ -32,6 +31,7 @@ const PlayerDetail = ({ player }) => {
 }
 
 const styles = {
+  
   headerContentStyle: {
     flexDirection: 'column',
     justifyContent: 'space-around'
