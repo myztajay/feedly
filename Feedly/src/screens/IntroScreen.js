@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import { View, Text, Button } from 'react-native'
 
 class IntroScreen extends Component{
+  static navigationOptions = {
+  title: 'My Current Game',
+  tabBarLabel: 'Live Game',
+  };
   render(){
     return(
       <View>

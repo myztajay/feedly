@@ -6,6 +6,7 @@ import Translation from '../Translation'
 import Button from './Button'
 
 const PlayerDetail = ({ player, nav }) => {
+    console.log(nav.navigate)
   const {teamId, summonerName, championId } = player
   const champImage = Translation[championId]
   return(

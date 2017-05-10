@@ -8,16 +8,34 @@ const GameNav = StackNavigator({
   Intro: { screen: IntroScreen },
   Game: { screen: GameScreen },
   Player: { screen: PlayerScreen }
-});
+  });
 
 
 const Nav = TabNavigator({
-  Game: { screen: GameNav },
+  Game: { screen: GameNav, title:"Home" },
   Profile: { screen: ProfileScreen },
-  etc: { screen: PlayerScreen }
-});
+  etc: { screen: ProfileScreen },
+}, {
+  tabBarPosition: 'bottom',
+  tabBarOptions: {
+    activeTintColor: 'white',
+    inactiveTintColor: 'white',
+    pressOpacity: 0.5,
+    tabStyle: {
+      backgroundColor: '#34495e',
+    },
+    style: {
+      backgroundColor: '#6C7A89'
 
+    }
+  }
+})
 
+// Nav.navigationOptions = {
+//   tabBarLabel: home
+//     activeTintColor: '#e91e63',
+//   }
+// }
 
 
 
