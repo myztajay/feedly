@@ -5,7 +5,7 @@ import CardSection from './CardSection'
 import Translation from '../Translation'
 import Button from './Button'
 
-const PlayerDetail = ({ player }) => {
+const PlayerDetail = ({ player, nav }) => {
   const {teamId, summonerName, championId } = player
   const champImage = Translation[championId]
   return(
@@ -24,8 +24,9 @@ const PlayerDetail = ({ player }) => {
       </CardSection>
 
       <CardSection>
-        <Button onPress={()=>console.warn(summonerName)}>
-          More intel on {summonerName}!
+        <Button
+        onPress={() => nav.navigate('Player', { player:summonerName })}>
+          More intel on { summonerName }!
         </Button>
       </CardSection>
     </Card>

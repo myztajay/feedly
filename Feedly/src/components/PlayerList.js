@@ -37,11 +37,10 @@ class PlayerList extends Component {
 
   renderPlayers(){
     return this.state.players.map((player)=>
-    <PlayerDetail key={player.summonerId} player={player}/> );
+    <PlayerDetail key={player.summonerId} player={player} nav={this.props.nav}/> );
   }
 
   render(){
-
     return(
       <ScrollView style={styles.mainContainer}>
         {this.renderPlayers()}

@@ -4,15 +4,17 @@ import { PlayerList } from '../components/PlayerList'
 
 class GameScreen extends Component{
   static navigationOptions = {
-  title: 'Welcome',
+  title: 'Live',
   };
   render(){
     return(
       <View>
-        <PlayerList />
+        <PlayerList nav={this.props.navigation}/>
       </View>
     )
   }
 }
+
+
 
 export { GameScreen }
