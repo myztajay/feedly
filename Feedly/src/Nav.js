@@ -21,6 +21,7 @@ const Nav = TabNavigator({
     activeTintColor: 'white',
     inactiveTintColor: 'white',
     pressOpacity: 0.5,
+    showIcon: true,
     tabStyle: {
       backgroundColor: '#34495e',
     },

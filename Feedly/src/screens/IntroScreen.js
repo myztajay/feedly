@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
-import { View, Text, Button } from 'react-native'
+import { View, Text, Button, Image } from 'react-native'
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 class IntroScreen extends Component{
   static navigationOptions = {
-  title: 'My Current Game',
-  tabBarLabel: 'Live Game',
-  };
+    title: 'My Current Game',
+    tabBarLabel: 'Live Game',
+    tabBarIcon: <Image source={require('../assets/images/home.png')} style={{width:26, height: 26}} />
+  }
+
   render(){
     return(
       <View>
@@ -16,6 +19,13 @@ class IntroScreen extends Component{
         />
       </View>
     )
+  }
+}
+
+const styles = {
+  iconStyle: {
+    height: 26,
+    width: 26
   }
 }
 
