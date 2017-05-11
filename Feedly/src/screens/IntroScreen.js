@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { View, Text, Button, Image } from 'react-native'
-import Icon from 'react-native-vector-icons/MaterialIcons';
 
 class IntroScreen extends Component{
   static navigationOptions = {
@@ -11,10 +10,12 @@ class IntroScreen extends Component{
 
   render(){
     return(
-      <View>
+      <View style={styles.mainContainerStyle}>
         <Text>Put your summoner name biatch!</Text>
+
         <Button
           onPress={() => this.props.navigation.navigate('Game', { user: 'Lucy' })}
+          style={styles.buttonStyle}
           title="Current Game"
         />
       </View>
@@ -26,6 +27,13 @@ const styles = {
   iconStyle: {
     height: 26,
     width: 26
+  },
+  mainContainerStyle: {
+    backgroundColor: '#34495e',
+    flex:1
+  },
+  buttonStyle: {
+    color: 'green'
   }
 }
 

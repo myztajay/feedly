@@ -50,7 +50,7 @@ class PlayerList extends Component {
 
 const styles = {
   mainContainer: {
-    backgroundColor: '#2980b9'
+    backgroundColor: '#34495e'
   }
 }
 
