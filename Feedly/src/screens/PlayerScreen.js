@@ -5,7 +5,7 @@ class PlayerScreen extends Component{
   static navigationOptions = ({ navigation }) => ({
   title: `${navigation.state.params.player}`,
   tabBarLabel: 'Player',
-    tabBarIcon: <Image source={require('../assets/images/profile.png')} style={{width:26, height: 26}} />,
+  tabBarIcon: <Image source={require('../assets/images/profile.png')} style={{width:26, height: 26}} />,
   headerTintColor:'#ffffff',
   headerStyle: {
     backgroundColor: '#34495e',

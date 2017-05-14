@@ -5,7 +5,7 @@ import { PlayerList } from '../components/PlayerList'
 class GameScreen extends Component{
   static navigationOptions = {
   title: 'current game',
-  tabBarLabel: 'Player',
+  tabBarLabel: 'GAME',
   headerTintColor:'#ffffff',
   headerStyle: {
     backgroundColor: '#34495e',

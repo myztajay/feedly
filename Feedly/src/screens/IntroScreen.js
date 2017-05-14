@@ -4,11 +4,11 @@ import { Input } from '../components/common'
 
 class IntroScreen extends Component{
   static navigationOptions = {
-    title: 'My Current Game',
-    tabBarLabel: 'Live Game',
+    title: 'Home',
+    tabBarLabel: 'HOME',
     headerTintColor:'#ffffff',
     headerStyle: {
-      backgroundColor: '#34495e',
+      backgroundColor: '#34495e'
     },
     tabBarIcon: <Image source={require('../assets/images/home.png')} style={{width:26, height: 26}} />
 
