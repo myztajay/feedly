@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, Image } from 'react-native';
-import Card from './Card';
-import CardSection from './CardSection'
+import { Card } from './common';
+import { CardSection } from './common'
 import Translation from '../Translation'
 import Button from './Button'
 

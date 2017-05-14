@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Image } from 'react-native'
+import { View, Image, Switch } from 'react-native'
 import { PlayerList } from '../components/PlayerList'
 
 class GameScreen extends Component{
