@@ -1,15 +1,16 @@
 import React from 'react'
-import { View, Text, Image } from 'react-native';
-import { Card } from './common';
-import { CardSection } from './common'
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { Card, CardSection, Button } from './common';
 import Translation from '../Translation'
-import Button from './Button'
+
 
 const PlayerDetail = ({ player, nav }) => {
     console.log(nav.navigate)
   const {teamId, summonerName, championId } = player
   const champImage = Translation[championId]
   return(
+    <TouchableOpacity
+    onPress={() => nav.navigate('Player', { player:summonerName })}>
     <Card>
       <CardSection>
         <View style={styles.thumbnailContainerStyle}>
@@ -23,14 +24,8 @@ const PlayerDetail = ({ player, nav }) => {
           <Text>{teamId}</Text>
         </View>
       </CardSection>
-
-      <CardSection>
-        <Button
-        onPress={() => nav.navigate('Player', { player:summonerName })}>
-          More intel on { summonerName }!
-        </Button>
-      </CardSection>
     </Card>
+    </TouchableOpacity>
   )
 }
 
