@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { View, Text, Button, Image, Picker } from 'react-native'
+import { View, Text, Button, Image } from 'react-native'
+import { Input } from '../components/common'
 
 class IntroScreen extends Component{
   static navigationOptions = {
@@ -11,7 +12,10 @@ class IntroScreen extends Component{
   render(){
     return(
       <View style={styles.mainContainerStyle}>
-    
+        <Input
+        label= {'Summoner Name'}
+        underlineColorAndroid= {'#FFFFFF'}
+         />
         <Button
           onPress={() => this.props.navigation.navigate('Game', { user: 'Lucy' })}
           style={styles.buttonStyle}
@@ -30,14 +34,15 @@ const styles = {
   },
   mainContainerStyle: {
     backgroundColor: '#34495e',
-    flex:1,
-    flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center',
+    flex:1,
+    alignItems: 'center'
+
   },
   buttonStyle: {
+    alignSelf: 'center',
     color: 'green',
-    align: 'flex-end'
+    align: 'center'
   }
 }
 
