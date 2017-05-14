@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import { View, Text, Button } from 'react-native'
+import { View, Text, Button, Image } from 'react-native'
 
 class PlayerScreen extends Component{
   static navigationOptions = ({ navigation }) => ({
   title: `${navigation.state.params.player}`,
   tabBarLabel: 'Player',
+    tabBarIcon: <Image source={require('../assets/images/profile.png')} style={{width:26, height: 26}} />,
   headerTintColor:'#ffffff',
   headerStyle: {
     backgroundColor: '#34495e',
-
   }
 });
 

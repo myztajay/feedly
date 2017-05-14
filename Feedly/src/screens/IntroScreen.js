@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, Button, Image } from 'react-native'
+import { View, Text, Button, Image, Picker } from 'react-native'
 
 class IntroScreen extends Component{
   static navigationOptions = {
@@ -11,11 +11,11 @@ class IntroScreen extends Component{
   render(){
     return(
       <View style={styles.mainContainerStyle}>
-        <Text>Put your summoner name biatch!</Text>
-
+    
         <Button
           onPress={() => this.props.navigation.navigate('Game', { user: 'Lucy' })}
           style={styles.buttonStyle}
+          color='#2ecc71'
           title="Current Game"
         />
       </View>
@@ -30,10 +30,14 @@ const styles = {
   },
   mainContainerStyle: {
     backgroundColor: '#34495e',
-    flex:1
+    flex:1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   buttonStyle: {
-    color: 'green'
+    color: 'green',
+    align: 'flex-end'
   }
 }
 
