@@ -1,13 +1,20 @@
 import React, { Component } from 'react'
-import { View, Text, Button, Image } from 'react-native'
+import { View, Text, Button, Image, Picker } from 'react-native'
 import { Input } from '../components/common'
 
 class IntroScreen extends Component{
   static navigationOptions = {
     title: 'My Current Game',
     tabBarLabel: 'Live Game',
+    headerTintColor:'#ffffff',
+    headerStyle: {
+      backgroundColor: '#34495e',
+    },
     tabBarIcon: <Image source={require('../assets/images/home.png')} style={{width:26, height: 26}} />
+
   }
+
+
 
   render(){
     return(
