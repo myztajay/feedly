@@ -19,20 +19,23 @@ class PlayerList extends Component {
     .catch((err)=> console.warn(err))
     .then((response)=> response.json())
     .then((riotData)=> {
-      const {participants, bannedChampions } = riotData
+      const { participants, bannedChampions } = riotData
       const players = participants
       this.setState({ players })
     })
-    //REAL API CALL - NEED TO CHANGE USER ID to active one for it to work
-    // fetch(`https://na1.api.riotgames.com/observer-mode/rest/consumer/getSpectatorGameInfo/NA1/20140394?api_key=${RiotKey}`, {
-    // .catch((err)=> console.warn(err))
-    // .then((response)=> response.json())
-    // .then((riotData)=> {
-    //   const {participants, bannedChampions } = riotData
-    //   const players = participants
-    //   this.setState({ players })
-    // })
   }
+
+
+    //REAL API CALL - NEED TO CHANGE USER ID to active one for it to work
+  //   fetch(`https://na1.api.riotgames.com/observer-mode/rest/consumer/getSpectatorGameInfo/NA1/20140394?api_key=${RiotKey}`, {
+  //   .catch((err)=> console.warn(err))
+  //   .then((response)=> response.json())
+  //   .then((riotData)=> {
+  //     const { participants, bannedChampions } = riotData
+  //     const players = participants
+  //     this.setState({ players })
+  //   })
+  // }
 
   renderPlayers(){
     return this.state.players.map((player)=>
